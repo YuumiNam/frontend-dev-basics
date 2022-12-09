@@ -56,9 +56,18 @@ body {
 </style>
 
 <script>
+liSelected = null;
+
 function onTabClicked(li) {
-	li.className = "selected";
 	// console.log(this); /* 여기에서의 this는 window */
+	
+	if(liSelected != null) {
+		liSelected.className = "";
+	}
+	
+	li.className = "selected";
+	liSelected = li;
+	
 }
 </script>
 </head>
