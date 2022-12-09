@@ -53,17 +53,31 @@ body {
 
 <script>
 function onClicked() {
-	elDiv = document.getElementById("my-div");
-	console.log(elDiv);
-	elDiv.style.backgroundColor = "#fa0";
-	elDiv.style.marginTop = "160px";
+	/* setInterval(출력할값,간격); */
+	intervalId = setInterval(function() {
+		
+		elDiv = document.getElementById("my-div");
+		marginTop = parseInt(elDiv.style.marginTop);
+		
+		if(marginTop == -80) {
+			clearInterval(intervalId);
+			return;
+		}
+		
+		marginTop -= 10;
+		elDiv.style.marginTop = marginTop + "px";
+		console.log(marginTop);
+	}, 500);
 }
+
+console.log("some codes"); /* js는 비동기언어다.
+							  setInterval이 나올 1초동안 기다려주지않고 먼저 출력됨 */
 
 </script>
 </head>
 
 <body>
-	<div id="my-div" class="box1" onclick='onClicked()'>
+	<div id="my-div" class="box1" style="margin-top:200px" onclick='onClicked()'>
 		CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
 	</div>
 </body>
