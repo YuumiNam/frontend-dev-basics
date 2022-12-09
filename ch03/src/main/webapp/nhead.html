@@ -10,11 +10,13 @@
 }
 
 .header {
-	width: 630px;
+	width: 666px;
 	heidht: 100px;
 	margin: 50px auto;
-	
-	background-color: #ddd;
+}
+
+.header .logo, .header .search-box {
+	float: left
 }
 
 .logo {
@@ -25,8 +27,9 @@
 }
 
 .search-box {
-	width: 400px;
-	height: 50px;
+	width: 380px;
+	height: 45px;
+	margin-left: 25px;
 	border: 3px solid #19CE60;
 	background-color: #fff;
 }
@@ -35,9 +38,55 @@
 	display: block;
 } 
 
+.search-box a, .search-box input, .search-box .btn-search {
+	float: right;
+}
+
+.search-box a, .btn-search button {
+	font-size: 0;
+}
+
 .search-box input {
+	float: left;
+	width: 260px;
+	padding: 13px 5px;
+	font-size: 16px;
+	
 	border: none;
 	outline: none;
+}
+
+.search-box #keyboard {
+	width: 20px;
+	height: 12px;
+	margin: 15px 10px 0 0;
+	
+	background: url('./images/nhead.png') no-repeat -398px -267px / 442px 428px;
+}
+
+.search-box #dropdown {
+	width: 10px;
+	height: 5px;
+	margin: 20px 10px 0 0;
+	
+	background: url('./images/nhead.png') no-repeat -158px -151px / 442px 428px;
+}
+
+.search-box .btn-search {
+	width: 45px;
+	height: 45px;
+	background-color: #19ce60;
+	cursor: pointer;
+}
+
+.search-box .btn-search button {
+	display: block;
+	border: none;
+	width: 22px;
+	height: 22px;
+	display: block;
+	margin: 10px auto;
+	background: #19CE60 url('/ch03/images/nhead.png') no-repeat -420px -24px / 442px 428px;
 }
 </style>
 </head>
@@ -45,12 +94,12 @@
 	<div class="header">
 		<h1 class="logo">네이버</h1>
 		<div class="search-box">
-			<input type="text">
-			<a href="#" id="keyboard">키보드</a>
-			<a href="#" id="dropdown">드롭다운</a>
 			<div class="btn-search">
 				<button>돋보기</button>
 			</div>
+			<a href="#" id="dropdown">드롭다운</a>
+			<a href="#" id="keyboard">키보드</a>
+			<input type="text">
 		</div>
 	</div>
 </body>
