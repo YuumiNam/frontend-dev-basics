@@ -37,11 +37,11 @@ var toQueryString = function(o) {
     return qs.join("&");
 }
 
-// 사용예1
+// 사용 예1
 var url5 = url + "?" + toQueryString(formData);
 console.log(url5);
 
-// 사용예2
+// 사용 예2
 // jQuery.ajax({
 //     url: "",
 //     type: "post",
