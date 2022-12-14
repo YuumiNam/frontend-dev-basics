@@ -1,4 +1,8 @@
-/* null과 undefined */
+/* 
+    null과 undefined 
+    undefined는 생성만됐지 할당이 안된상태
+    null은 생성+할당이 다 됐지만 값이 null임
+*/
 
 var myVar01 = undefined; // 명시적으로 undefined 대입
 var myVar02;             // 암시적으로 undefined 대입
@@ -12,6 +16,8 @@ console.log("========================");
 
 
 // undefined와 null의 동치(equal)비교
+// 자바스크립트에서는 '=='보다는 '==='를 써서 비교해주는것이 바람직하다
+
 console.log(myVar01 == myVar03);  // 값비교
 console.log(myVar01 === myVar03);  // 타입비교 + 값비교
 
