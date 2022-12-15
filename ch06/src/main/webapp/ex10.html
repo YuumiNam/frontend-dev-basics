@@ -14,9 +14,11 @@ window.onload = function() {
 	var h4s = document.getElementsByTagName("h4");
 	
 	// 3. Class Name
+	var h5s = document.getElementsByClassName("header");
 	
-	// 4. CSS Selector (선택)
-	
+	// 4. CSS Selector(선택자)
+	var header07 = document.querySelector("#header-07");
+	var h6s = document.querySelectorAll(".header2");
 	
 	setTimeout(function() {
 		
@@ -25,6 +27,14 @@ window.onload = function() {
 		
 		h4s[0].innerText += ' by getElementByTagName()';
 		h4s[1].innerText += ' by getElementByTagName()';
+		
+		h5s[0].innerText += ' by getElementByClassName()';
+		h5s[1].innerText += ' by getElementByClassName()';
+		
+		header07.innerText += ' by querySelector()';
+		
+		h6s[0].innerText += ' by querySelectorAll()';
+		h6s[1].innerText += ' by querySelectorAll()';
 		
 	}, 2000);
 }
