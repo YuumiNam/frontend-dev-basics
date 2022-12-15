@@ -3,6 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		
+		// element 생성
+		var imgElement = document.createElement("img");
+		
+		imgElement.src = 'https://mblogthumb-phinf.pstatic.net/20141013_39/botos__1413177276768iNSul_JPEG/003.jpg?type=w2'
+		imgElement.style.width = "200px";
+		imgElement.alt = "렉돌만세~";
+		imgElement.title = "렉돌만세~";
+		
+		document.body.appendChild(imgElement);
+	}, 2000)
+}
+</script>
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>

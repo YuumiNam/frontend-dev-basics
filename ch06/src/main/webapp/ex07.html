@@ -3,6 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		
+		// HTML 내용 자체를 써줌
+		var htmls = "<h3>Hello DOM!!</h3>";
+		
+		// body에 써준 내용을 넣어줌
+		// document.body.innerHTML = htmls; 이렇게 쓰면 기존 내용은 없어짐
+		document.body.innerHTML = document.body.innerHTML + htmls;
+	}, 2000)
+}
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>

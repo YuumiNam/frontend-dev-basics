@@ -3,6 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		
+		// element 생성
+		var h3Element = document.createElement("h3");
+		
+		// element내에 있는 text 생성
+		var h3TextNode = document.createTextNode("Hello DOM!!");
+		
+		// h3 element에 h3text를 종속시킴
+		h3Element.append(h3TextNode);
+		
+		// body에 element 추가
+		document.body.appendChild(h3Element);
+	}, 2000)
+}
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
