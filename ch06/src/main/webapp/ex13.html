@@ -3,10 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+/*
+기본이벤트동작 막기
+1. anchor: 버튼이나 메뉴로 사용할때(click)
+2. form: validation(submit event)
+*/
+
+window.addEventListener('load', function(){
+	var btn = document.getElementById('btn-delete');
+	
+	btn.addEventListener('click', function(event){
+		event.preventDefault(); // 본래 anchor의 기능을 막고 팝업창을 띄우기 위함
+								// mysite 방명록에서 삭제버튼 누르면 삭제 페이지로 넘어가는데 대신에 팝업창을 띄우고 싶은취지임
+		console.log("popup 띄우기");
+	});
+});
+
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
-	<h2>6. 기본(default) Event Hanlder 동작 막기 - 1. anchor</h2>	
+	<h2>6. 기본(default) Event Hanlder 동작 막기 - 1. anchor</h2>
 	<a href="" id="btn-delete">삭제</a>
 </body>
 </html>
