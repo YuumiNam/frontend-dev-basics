@@ -84,10 +84,46 @@ var sum = function() {
     //     s += e;
     // });
     
-    
+
+    // Array의 prototype을 불러오는건 상관없지만 this가 sum함수가 아닌 Array가 되어버려서 맞지않는다
+    // 이럴때 apply(파라미터가 없을 때), call(파라미터가 있을 때) 을 쓴다
+    Array.prototype.forEach.call(arguments, function(e) {
+        s += e;
+    })
+
     // return s;
 }
 
-console.log(sum(1));
-console.log(sum(1, 2));
-console.log(sum(1, 2, 3, 4));
+// console.log(sum(1));
+// console.log(sum(1, 2));
+// console.log(sum(1, 2, 3, 4));
+
+
+
+// 위의 call 설명
+var myObject = {
+    v : "둘리",
+    f : function() {
+        console.log(this.v);
+    },
+    f1 : function(param1, param2) {
+        console.log(param1 + " " + this.v + " " + (param2 ? param2 : ""));
+    }
+}
+
+var yourObject = {
+    v : "dooli"
+}
+
+myObject.f(); // 일반적인 함수 실행
+myObject.f.apply(yourObject); // apply를 쓰면 this를 자신이 아닌 다른 함수를 this로 지정가능
+myObject.f1.call(yourObject, "Hello", "again"); // call = apply + 파라미터지정가능
+
+
+
+// 나온김에 ex12.js에 나왔던 bind도 설명
+var fb = function() {
+    console.log(this.v);
+}.bind(yourObject);
+
+fb();
