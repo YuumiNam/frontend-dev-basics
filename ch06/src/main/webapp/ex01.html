@@ -9,6 +9,21 @@ console.log(window.n, n); // window은 생략가능... setTimeout(){}도 엄밀�
 
 var email = "dooli@gmail.com"
 console.log(window.email, email); // 반대로는 안됨 (하지만 Browser에서는 됨, 구분이 없음... window라는 전역객체의 속성으로 보기때문)
+
+// 팝업창 (하지만 실무에서는 별로 안쓰는걸 추천)
+setTimeout(function() {
+	var child = window.open("popup.html", "popup", "width=600, height=400");
+	
+	setTimeout(function(){
+		// 자식 창의 내용을 바꿔봄
+		child.document.write("<h1>popup contents changed!!</h1>")
+	}, 2000);
+	
+	setTimeout(function(){
+		// child(자식 창의 window 객체) 이동
+		child.moveTo(200, 200);
+	}, 4000);
+}, 2000);
 </script>
 
 </head>
