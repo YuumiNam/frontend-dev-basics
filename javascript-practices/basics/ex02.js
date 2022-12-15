@@ -29,6 +29,23 @@
 */
 
 
+/*
+자바스크림트 객체를 분류하는 또 다른 방법
+1. 내장 객체: 
+	- JavaScript Engine 내부에 미리 내장되어 있는 객체
+	- Number, Boolean, Date, RegExp, Array, Object, .... : 생성자 함수
+	- parseInt, setTimeout, setInterval, .... : 일반 함수
+	
+2. 호스트 객체: 
+	- JavaScript Engine이 embeded 되어있는 환경에 있는 객체
+	- Browser가 호스트인 경우: screen, location, navigator, ***DOM***, ***XmlHttpRequest***, ....
+	- Node가 호스트인 경우 (Node.js에서 서버만들때): http, os, fs, path, ....
+	
+3. 사용자 객체
+	- JavaScript Engine이 실행되면서 생성되는 객체
+*/
+
+
 
 // var는 변수를 선언한다는 의미일뿐 타입을 결정하는게 아님
 console.log("========기본타입========");
