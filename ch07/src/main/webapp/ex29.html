@@ -5,7 +5,15 @@
 <script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
 <script type="text/javascript">
 $(function() {
-	setTimeout(function(){
+	setTimeout(function() {
+		$("h2, p")
+			.wrapAll("<div>")
+			.parent() // travese API... "h2, p"의 부모인 <div>를 불러와야하기 때문
+			.css({
+				border: "1px solid #ccc",
+				width: "200px", 
+				padding: "10px"
+			});
 	}, 2000);
 });  
 </script>

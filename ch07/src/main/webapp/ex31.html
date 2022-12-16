@@ -5,7 +5,8 @@
 <script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
 <script type="text/javascript">
 $(function() {
-	setTimeout(function(){
+	setTimeout(function() {
+		$("ul li:nth-child(3), ul li:nth-child(5)").remove(); // 1부터 시작
 	}, 2000);
 });  
 </script>
@@ -16,10 +17,10 @@ $(function() {
 	<ul>
 		<li>첫번째 아이템입니다.</li>
 		<li>두번째 아이템입니다.</li>
-		<li>삭제할  아이템입니다.</li>
+		<li>삭제할 아이템입니다.</li>
 		<li>네번째 아이템입니다.</li>
 		<li>삭제할 아이템입니다.</li>
-		<li>다섯 번째 아이템입니다.</li>
+		<li>다섯번째 아이템입니다.</li>
 	</ul>
 
 </body>
