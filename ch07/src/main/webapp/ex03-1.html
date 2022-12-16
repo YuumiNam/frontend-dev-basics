@@ -6,8 +6,9 @@
 <script>
 $(function() {
 	var $obj = $(".par");
+	
 	$obj.click(function(){
-		console.log("clicked:" + this);
+		console.log("clicked:" + this); // 이벤트 핸들러에서의 this는 jQuery Object($obj)가 아닌 HTMLElement
 	});
 	
 	setTimeout(function(){
