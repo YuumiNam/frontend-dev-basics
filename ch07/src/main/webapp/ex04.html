@@ -5,7 +5,9 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
-	setTimeout(function(){
+	setTimeout(function() {
+		var $obj = $("li");
+		$obj.css('text-decoration', 'underline');
 	}, 2000);
 });
 </script>

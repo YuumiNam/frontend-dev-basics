@@ -5,8 +5,18 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
-	setTimeout(function(){	
-	}, 1000);
+	setTimeout(function() {
+		//체인으로 거는방법
+		$('.red strong')
+		.css('color', 'red')
+		.css('font-weight', 'normal');
+		
+		// 한번에 모아서
+		$('.blue strong').css({
+			color: 'blue',
+			fontWeight: 'normal' // Camel표기법으로
+		});
+	}, 2000);
 });
 </script>
 </head>

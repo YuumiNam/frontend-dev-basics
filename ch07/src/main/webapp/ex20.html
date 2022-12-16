@@ -4,8 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
-$(function(){
-	setTimeout(function(){
+$(function() {
+	setTimeout(function() {
+		var htmls = "<strong>가나다라</strong>";
+	
+		$("#p1").prepend(htmls); // 앞에다가 특정 element를 갖다붙임
 	}, 1000);
 });
 </script>

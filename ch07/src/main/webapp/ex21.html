@@ -4,14 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
-$(function(){
-	setTimeout(function(){
+$(function() {
+	setTimeout(function() {
+		var htmls = "<strong>카타파하</strong>";
+		
+		$("#p1").append(htmls); // 뒤에다가 특정 element를 갖다붙임
 	}, 1000);
 });
 </script>
 </head>
 <body>
-	<h1>DOM 조작 API - prepend()</h1>
+	<h1>DOM 조작 API - append()</h1>
 	
 	<p id="p1">
 		가다나라마바사아자차

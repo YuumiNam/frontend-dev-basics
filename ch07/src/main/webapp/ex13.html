@@ -5,7 +5,10 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
-	setTimeout(function(){
+	setTimeout(function() {
+		$('li[id]').css('color', 'red'); // id가 있는 element만 찾아라
+		$('li[class="second"]').css('color', 'blue');
+		$('li[class!="second"]').css('font-weight', 'bold'); // class가 없는 element도 'second가 아닌 element'
 	}, 1000);
 });
 </script>

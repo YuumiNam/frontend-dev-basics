@@ -5,7 +5,9 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
-	setTimeout(function(){
+	setTimeout(function() {
+		$('li:first').css('color', 'red'); // first-child가 css에서 적용되는방식... first는 jQuery에서만 사용가능
+		$('li:last').css('color', 'blue');
 	}, 1000);
 });
 </script>

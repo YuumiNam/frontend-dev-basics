@@ -5,7 +5,11 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
-	setTimeout(function(){
+	setTimeout(function() {
+		$("#p1").text("1.안녕하세요");
+		$("#p2").text("2.<strong>안녕하세요</strong>"); // <strong></strong>태그도 같이 출력됨
+		console.log($("#p3").text()); // text 안에 아무것도 안들어가있으면 '쓰기'가 아닌 '읽기모드'로 바뀜
+		console.log($("#p4").text()); // 읽기로 가져올때는 <strong></strong> 태그 빼고 text만 출력됨
 	}, 1000);
 });
 </script>
@@ -21,7 +25,7 @@ $(function(){
 		HTML의 escape 문자들
 		& -> &amp;
 		space -> &nbsp;
-		< -> &lth;
+		< -> &lt;
 		> -> &gt;
 		' -> &quot;
 	-->

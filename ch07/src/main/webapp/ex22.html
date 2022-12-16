@@ -4,8 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
-$(function(){
-	setTimeout(function(){
+$(function() {
+	setTimeout(function() {
+		var htmls = "<h1>타이틀</h1>";
+		
+		$("#p1").before(htmls);
 	}, 1000);
 });
 </script>

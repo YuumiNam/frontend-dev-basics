@@ -5,7 +5,9 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
-	setTimeout(function(){
+	setTimeout(function() {
+		$('li:contains("샘플")').css('color', 'red');
+		$('li:has("strong")').css('color', 'blue');	// strong을 가지고있는 li에 적용	
 	}, 1000);
 });
 </script>
