@@ -22,8 +22,8 @@ $(function() {
 		$.ajax({
 			url: "${pageContext.request.contextPath }/api/02",
 			async: true,
-			dataType: "json",
 			type: "post",
+			dataType: "json",
 			contentType: "application/x-www-form-urlencoded",
 			data: $.param(formData),
 			success: function(response) {
